@@ -30,26 +30,26 @@ function MainHangMan() {
     }
   }, [gussesword])
   const lettersinWrod = gussesword.filter(letter => word.includes(letter))
-  const loser = incorrectLetter.length >= 6 ;
+  const loser = incorrectLetter.length >= 6;
   const winer = word.split('').every(letter => gussesword.includes(letter));
   return (
     <div className={`min-h-screen bg-slate-300 `}>
       <div className={` md:w-[600px]  text-center container p-4 mx-auto min-h-screen bg-slate-400 ${loser && 'bg-slate-800 '}`}>
-        
+
         {winer &&
           <>
-          <h1 className='text-2xl capitalize  font-bold text-white'>
-            Good Job Winer
-          </h1>
-          <button className='py-1 px-2 rounded text-white bg-slate-500 mt-3' onClick={()=> window.location.reload()}>Refresh</button>
+            <h1 className='text-2xl capitalize  font-bold text-white'>
+              Good Job Winer
+            </h1>
+            <button className='py-1 px-2 rounded text-white bg-slate-500 mt-3' onClick={() => window.location.reload()}>Refresh</button>
           </>
         }
         {loser &&
           <>
             <h1 className='text-2xl capitalize  font-bold text-white'>
               Good Job Loser
-          </h1>
-          <button className='py-1 px-2 rounded text-white bg-slate-500 mt-3' onClick={()=> window.location.reload()}>Refresh</button>
+            </h1>
+            <button className='py-1 px-2 rounded text-white bg-slate-500 mt-3' onClick={() => window.location.reload()}>Refresh</button>
           </>}
         <HangMan numberOfGuess={incorrectLetter.length} />
         <HangManWord guessletter={gussesword} wordtoguess={word} />

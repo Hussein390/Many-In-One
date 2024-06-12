@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import { useState } from 'react'
 
 type Div = {
   one: string,
@@ -29,9 +29,9 @@ function Multible() {
     )
   }
   return (
-    <div  className='min-h-screen bg-slate-400 pt-4'>
+    <div className='min-h-screen bg-slate-400 pt-4'>
       <div id='div' className='relative w-[400px] mx-auto  rounded-md bg-slate-300'>
-        <p className='absolute left-2 top-2 font-bold text-lg'>3/{ isOpen}</p>
+        <p className='absolute left-2 top-2 font-bold text-lg'>3/{isOpen}</p>
         {isOpen === 1 ?
           <Div
             one='First Name'
@@ -40,12 +40,12 @@ function Multible() {
             isopenNum={2}
           />
           : isOpen === 2 ?
-              <Div
-            one='Degree'
-            two='Contry'
-            three='Skills'
-            isopenNum={3}
-          />
+            <Div
+              one='Degree'
+              two='Contry'
+              three='Skills'
+              isopenNum={3}
+            />
             :
             <Div
               one='Freinds'

@@ -114,7 +114,7 @@ function App() {
           </div>
         </div>
       )}
-       <Routes>
+      <Routes>
       <Route path='/' element={<SpeedType />} />
       <Route path='/type-speed-game' element={<SpeedType />} />
       <Route path='/hangman' element={<MainHangMan />} />

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 type square = {
   val: string
   onClick: () => void
@@ -14,7 +14,7 @@ function TicToc() {
   } else {
     status = `Next is: ${isX ? "X" : "O"}`
   }
-    
+
   const handleClick = (i: number) => {
     if (calculateWinner(sqaures) || sqaures[i]) {
       return
@@ -37,12 +37,12 @@ function TicToc() {
       <div className=' grid grid-cols-3 w-[350px] mx-auto p-4 bg-slate-600 rounded'>
         {sqaures.map((item: string, id: number) => {
           return (
-            <Square val={sqaures[id]} onClick={() => handleClick(id) } />
+            <Square val={sqaures[id]} onClick={() => handleClick(id)} />
           )
         })}
         <div className='flex justify-between  w-[300px] mt-4'>
-        <p className='text-lg text-yellow-400 font-bold mt-2 '>{ status}</p>
-        <button onClick={handleRestart} className='p-2 font-bold bg-slate-400 rounded text-yellow-300'>Restart</button>
+          <p className='text-lg text-yellow-400 font-bold mt-2 '>{status}</p>
+          <button onClick={handleRestart} className='p-2 font-bold bg-slate-400 rounded text-yellow-300'>Restart</button>
         </div>
       </div>
     </div>
@@ -58,11 +58,11 @@ function calculateWinner(sqaure: any) {
     [0, 3, 6],
     [1, 4, 7],
     [2, 5, 8],
-    
+
     [0, 4, 8],
     [2, 4, 6],
   ]
-  for (let i = 0; i < winnerPatterns.length; i++){
+  for (let i = 0; i < winnerPatterns.length; i++) {
     const [a, b, c] = winnerPatterns[i];
     if (sqaure[a] && sqaure[a] === sqaure[b] && sqaure[b] === sqaure[c]) {
       return sqaure[a]

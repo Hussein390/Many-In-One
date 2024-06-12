@@ -1,4 +1,3 @@
-import React from 'react'
 
 const Head = (
   <div className='size-14 rounded-full border-8 border-black absolute top-14 -right-6'>

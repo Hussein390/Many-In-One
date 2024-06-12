@@ -35,7 +35,7 @@ function TicToc() {
   return (
     <div className="min-h-screen bg-blue-900 pt-8">
       <div className=' grid grid-cols-3 w-[350px] mx-auto p-4 bg-slate-600 rounded'>
-        {sqaures.map((item: string, id: number) => {
+        {sqaures.map((_, id: number) => {
           return (
             <Square val={sqaures[id]} onClick={() => handleClick(id)} />
           )

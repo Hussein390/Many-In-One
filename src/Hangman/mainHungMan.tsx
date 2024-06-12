@@ -5,7 +5,7 @@ import HangManWord from './HangManWord';
 import Keybord from './keyBoard';
 
 function MainHangMan() {
-  const [word, setword] = useState(() => {
+  const [word] = useState(() => {
     return Word[Math.floor(Math.random() * Word.length)]
   });
   const [gussesword, setGussesword] = useState<string[]>([]);
